@@ -1,4 +1,5 @@
 import ProcessingStep from './processingStep';
+import ProcessingFinishStep from './ProcessingFinishStep';
 
 function ProcessingLog({ events }) {
     return (
@@ -7,7 +8,9 @@ function ProcessingLog({ events }) {
                 <div class="flex flex-wrap w-full mx-auto justify-center">
                     <div class="lg:w-3/5 md:w-1/2 md:pr-10 md:py-6">
                         { events.map(e =>
-                            <ProcessingStep title={e.step} description={new Date(e.time*1e3).toLocaleTimeString()}/>
+                            e.last ?
+                            <ProcessingFinishStep /> :
+                            <ProcessingStep title={e.step} image={e.picture} description={new Date(e.time*1e3).toLocaleTimeString()}/>
                         )}
                     </div>
                 </div>

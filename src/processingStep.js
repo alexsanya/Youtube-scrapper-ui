@@ -1,4 +1,4 @@
-function ProcessingStep({ title, description }) {
+function ProcessingStep({ title, description, image }) {
     return (
         <div class="flex relative pb-12">
           <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
@@ -11,6 +11,7 @@ function ProcessingStep({ title, description }) {
           </div>
           <div class="flex-grow pl-4">
             <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">{ title }</h2>
+            { image && <img src={`data:image/jpg;base64,${image}`} /> }
             <p class="leading-relaxed">{ description }</p>
           </div>
         </div>

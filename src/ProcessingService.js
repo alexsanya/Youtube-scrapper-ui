@@ -1,6 +1,6 @@
 import axios from 'axios';
-const SERVER_URL = 'ws://localhost:8000/process';
-const VIDEO_INFO_URL = 'http://localhost:8000/video-info';
+const SERVER_URL = 'wss://youtube-scrapper-server.herokuapp.com/process';
+const VIDEO_INFO_URL = 'https://youtube-scrapper-server.herokuapp.com/video-info';
 
 const ProcessingAPI = {
     process: (videoUrl, onMessage) => {

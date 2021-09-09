@@ -27,6 +27,10 @@
 .App-link {
   color: #61dafb;
 }
+.progress-label {
+  margin-left: -45%;
+  color: rgba(139, 92, 246, var(--tw-border-opacity));
+}
 
 @keyframes App-logo-spin {
   from {

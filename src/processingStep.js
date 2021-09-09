@@ -1,4 +1,4 @@
-function ProcessingStep({ title, description, image, loader=false }) {
+function ProcessingStep({ title, description, image, progress, loader=false }) {
     return (
         <div class="flex relative pb-12">
           <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
@@ -15,6 +15,7 @@ function ProcessingStep({ title, description, image, loader=false }) {
                 { loader &&
                     <div class=" flex justify-center items-center mx-5">
                         <div class="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-purple-500"></div>
+                        <div className="progress-label">{`${Math.round(progress*100)}%`}</div>
                     </div>
                 }
             </h2>
